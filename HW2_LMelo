@@ -1,6 +1,6 @@
 ### Lab1 
 
-## Group Members, Muhibul M
+## Group Members, Muhibul 
 
 
 # PP1 
@@ -23,4 +23,19 @@
     #sim_rolls <- sample(1:6, how_many_rolls, replace = TRUE)
     #sum(sim_rolls == "6")
     ##[1]19
-  #In analyzing, it is fair to say that there is some confidence level atached to this and any conclusion depending on the observer. Boundaries would be subjective to the observers 
+  #In analyzing, it is fair to say that there is some confidence level atached to this and any conclusion depending on the observer. Boundaries would be subjective to the observers sensitivity to the data. 
+  #with that, the view of the die being fair or unfair is also subjective to the results of the specific sample despite stattistical analysis. I
+    #In our dataset, with desicion ruling of Fair = P(6) up 19, the chance of the die being unfair is 80/6 or 13.33
+
+#EP1
+  #We did a simulated roll of a vector with 100 rows and 50 columns for 5,000 rolls
+  #Decision rule if P(6) occurs > 25% of the time then the die is unfair
+  #our results below showed an occurence of 843 times or 16.86% showing the die to be fair
+    #> if_come_up_6 <- (lots_of_sim_rolls == 6)
+    #> sum(if_come_up_6)
+    #[1] 843
+    #> mean(if_come_up_6)
+    #[1] 0.1686
+  #to note, it is interesting that within our dataset the probability of 6 showed up closer to the original statistical probability of 6 on a fair die or 16.67%. I suppose this is driving home the point of the law of large numbers.
+  #I would have greater confidence in my conclusion if a distribution table of the other results would show a similar probobaility statistic
+  #I would modify the analysis of only looking at a single number of die result and compare to the range of the other numbers
