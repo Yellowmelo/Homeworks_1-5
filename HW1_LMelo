@@ -1,0 +1,48 @@
+Study Group;
+  Zack & Muhibul
+
+----------------------------------------
+
+Dice Project - Random #s
+Objective; Manipulate Dice to see if results vary. Roll dice 20 times and track counts of 6
+
+RESULTS: No Significant preference to 6 w/ die 1 | Significant preference against 6 w/ die 2
+
+Image
+
+Dice # | 1 | 2 | 3 | 4 | 5 | 6 | Total
+
+#1 count | 1 | 4 | 3 | 5 | 4 | 3 | 20 |
+#1 % | 5 | 20 | 15 | 25 | 20 | 15 | 100 |
+
+#2 count| 6 | 4 | 3 | 4 | 3 | - | 20 |
+#2 %. |30 | 20 | 15 | 20 | 15 | - | 100 |
+
+Data;
+
+Attempt | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+
+Die #1 | 2 | 5 | 2 | 4 | 2 | 4 | 3 | 3 | 5 | 5 | 4 | 4 | 6 | 4 | 1 | 3 | 2 | 5 | 6 | 6 |
+(light load)
+Die #2 | 1 | 4 | 2 | 3 | 1 | 5 | 4 | 1 | 4 | 4 | 3 | 5 | 2 | 1 | 2 | 2 | 5 | 1 | 3 | 1 |
+(Heavy Load/Sanded) |
+
+------------------------
+
+Household Pulse data lookup
+
+My interest peaked in reviewing people surveyed reporting to be behind on rent / mortgage and the relationship to income.
+As suspected, people with lower income tended to be behind on rent, however the low range was different between people who rented and people who mortgaged.
+People behind on rent had an average income less than $25k
+People behind on mortgage had an average income between $35K and $49.9K
+
+load("~/Downloads/Household_Pulse_W57/Household_Pulse_data_w57.RData")
+view(Household_Pulse_data)
+summary(Household_Pulse_data)
+dim(Household_Pulse_data)
+library(tidyverse)
+ggplot(data = Household_Pulse_data) +
+geom_point(mapping = aes(x = RENTCUR, y = MORTCUR, color = INCOME))
+
+Image
+
